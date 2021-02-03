@@ -1,0 +1,71 @@
+/* Features (Особенности) */
+
+.features-section {
+  padding-bottom: 0;
+}
+
+.features-list {
+  display: flex;
+  list-style: none;
+}
+
+.features-title-item {
+  margin-bottom: 10px;
+  @include fonts(700, 14px, 1.14, 0.03em);
+  color: $primary-text-color;
+  text-transform: uppercase;
+}
+
+.features-text {
+  @include fonts(400, 14px, 1.71, 0.03em);
+  color: $secondary-text-color;
+}
+
+.features-item {
+  width: calc((100% - 90px) / 4);
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features-icons-item {
+  display: block;
+  width: 65px;
+  height: 70px;
+  padding: 0;
+  border: none;
+}
+
+.features-item::before {
+  display: block;
+  content: "";
+  margin-bottom: 30px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.icon-antena::before {
+  background-image: url("../images/icons/icons-features/antenna.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-clock::before {
+  background-image: url("../images/icons/icons-features/clock.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-diagram::before {
+  background-image: url("../images/icons/icons-features/diagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-astronaut::before {
+  background-image: url("../images/icons/icons-features/astronaut.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

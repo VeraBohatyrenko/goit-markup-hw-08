@@ -1,0 +1,83 @@
+/* Постоянные клиенты */
+.clients {
+  &-list {
+    // display: block
+    justify-content: space-between;
+  }
+
+  &-title {
+    margin-bottom: 50px;
+    @include fonts(700, 36px, 1.16, 0.03em);
+    color: $primary-text-color;
+    text-align: center;
+  }
+}
+
+.clients-logo {
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:hover .logo-icon,
+  &:focus .logo-icon {
+    fill: $accent-color;
+    @include transition;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    @include transition(border-color);
+  }
+}
+
+.logo-icon {
+  fill: #afb1b8;
+}
+
+// /* Постоянные клиенты */
+// .clients {
+//   &-list {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   &-title {
+//     margin-bottom: 50px;
+//     @include fonts(700, 36px, 1.16, 0.03em);
+//     color: $primary-text-color;
+//     text-align: center;
+//   }
+// }
+
+// .clients-logo {
+//   justify-content: center;
+//   display: inline-flex;
+//   align-items: center;
+//   width: 170px;
+//   height: 90px;
+//   border: 1px solid #afb1b8;
+//   box-sizing: border-box;
+//   border-radius: 4px;
+
+//   &:hover .logo-icon,
+//   &:focus .logo-icon {
+//     fill: $accent-color;
+//     @include transition;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     border-color: $accent-color;
+//     @include transition(border-color);
+//   }
+// }
+
+// .logo-icon {
+//   fill: #afb1b8;
+// }

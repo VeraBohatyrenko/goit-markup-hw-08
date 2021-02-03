@@ -1,0 +1,79 @@
+/* Социальные сети team */
+
+.socials {
+  &-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-item {
+    width: calc((100% - 30px) / 4);
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    background: #ffffff;
+    background-position: center;
+    border-radius: 50%;
+    border: none;
+  }
+
+  &-link:hover,
+  &-link:focus {
+    background: #2196f3;
+    @include transition(background);
+  }
+
+  &-icon {
+    fill: #afb1b8;
+  }
+
+  &-link:hover &-icon,
+  &-link:focus &-icon {
+    fill: $primary-white-color;
+    @include transition;
+  }
+}
+
+/* Социальные футер */
+
+.socials {
+  &-list-footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-link-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    background-position: center;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &-link-footer:hover,
+  &-link-footer:focus {
+    background: #2196f3;
+    @include transition(background);
+  }
+
+  &-icon-footer {
+    fill: $primary-white-color;
+  }
+
+  &-item-footer:not(:last-child) {
+    margin-right: 10px;
+  }
+}

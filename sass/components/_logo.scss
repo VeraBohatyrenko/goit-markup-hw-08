@@ -1,7 +1,10 @@
 /* header logo */
 
 .header-logo {
-  // margin: 25px 93px 25px 0px;
+  margin-top: 26px;
+  margin-right: auto;
+  margin-bottom: 26px;
+  margin-left: 15px;
   @include fonts(700, 26px, 1.19, 0.03em);
   color: $primary-text-color;
   font-family: "Raleway", sans-serif;

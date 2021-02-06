@@ -542,6 +542,8 @@ img {
 /* Hero (Герой) */
 .hero {
   background: #c4c4c4;
+  text-align: center;
+  padding: 118px 0;
 }
 
 .hero-overlay {
@@ -552,6 +554,7 @@ img {
 }
 
 .hero-title {
+  margin-bottom: 30px;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -575,7 +578,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 480px) {
+@media screen and (min-width: 1200px) {
   .hero-title {
     font-weight: 900;
     font-size: 44px;
@@ -998,15 +1001,67 @@ img {
 }
 
 /* Features (Особенности) */
-.features-section {
-  padding-bottom: 0;
+.section-features {
+  padding: 60px 0;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.features-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
+@media screen and (min-width: 480px) {
+  .section-features {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-features {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-features {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .features-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-item {
+    width: calc((100% - (90px)) / 4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none;
+  }
+  .features-item {
+    width: calc((100% - (30px)) / 2);
+  }
+}
+
+.features-item::before {
+  display: block;
+  content: "";
+  margin-bottom: 30px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
 .features-title-item {
@@ -1025,31 +1080,6 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-}
-
-.features-item {
-  width: calc((100% - 90px) / 4);
-}
-
-.features-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.features-icons-item {
-  display: block;
-  width: 65px;
-  height: 70px;
-  padding: 0;
-  border: none;
-}
-
-.features-item::before {
-  display: block;
-  content: "";
-  margin-bottom: 30px;
-  height: 120px;
-  background: #f5f4fa;
-  border-radius: 4px;
 }
 
 .icon-antena::before {
@@ -1077,64 +1107,69 @@ img {
 }
 
 /* Advantage (Преимущества) */
-@media screen and (max-width: 1199px) {
-  .advantages {
-    display: none;
-  }
+.section.advantages-section {
+  display: none;
+  margin-top: 0px;
 }
 
 @media screen and (min-width: 1200px) {
-  .advantages-section {
-    margin-top: 0px;
+  .section.advantages-section {
+    display: block;
   }
-  .advantages-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    list-style: none;
-  }
-  .advantages-item {
-    position: relative;
-    width: calc((100% - 60px) / 3);
-  }
-  .advantages-title {
-    margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
-    color: #212121;
-    text-align: center;
-  }
-  .advantages-item:not(:last-child) {
-    margin-right: 30px;
-  }
-  .label::before {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 70px;
-    background: rgba(47, 48, 58, 0.8);
-    bottom: 0;
-  }
-  .label-text {
-    position: absolute;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    bottom: 0;
-    margin: 0;
-    width: 100%;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
+}
+
+.advantages-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+.advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.advantages-item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+}
+
+.advantages-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.label::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+}
+
+.label-text {
+  position: absolute;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 /* Team (Команда) */

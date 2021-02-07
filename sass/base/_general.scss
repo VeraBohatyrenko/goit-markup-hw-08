@@ -16,7 +16,7 @@
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  // align-content: center;
+  align-content: center;
   // vertical-align: baseline;
 }
 
@@ -39,7 +39,10 @@
 }
 
 .section {
+  padding: 60px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
   outline: 2px solid red;
-  // padding-top: 94px;
-  // padding-bottom: 94px;
 }

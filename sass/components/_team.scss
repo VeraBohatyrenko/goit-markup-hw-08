@@ -1,39 +1,63 @@
 /* Team (Команда) */
 
 .section-team {
+  width: 100%;
+  padding-top: 60px;
   background-color: #f5f4fa;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0;
+  }
 }
 
 .team-list {
   list-style: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  }
 }
 
-// .info-worker {
-//   padding: 30px 32px;
-// }
+.info-worker {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
 
 .team {
-  // &-list {
-  //   display: flex;
-  // }
-
   &-item {
-    // width: calc((100% - 90px) / 4);
     background: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    margin-top: 30px;
+    width: 100%;
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - (30px)) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - (90px)) / 4);
+      margin-top: 50px;
+    }
   }
 
-  // &-item:not(:last-child) {
-  //   margin-right: 30px;
-  // }
+  .features-item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
 
   &-title {
-    margin-bottom: 50px;
-    @include fonts(700, 36px, 1.16, 0.03em);
+    @include fonts(700, 28px, 1.18, 0.03em);
     color: $primary-text-color;
     text-align: center;
+    @media screen and (min-width: $desktop) {
+      @include fonts(700, 36px, 1.16, 0.03em);
+    }
   }
 }
 

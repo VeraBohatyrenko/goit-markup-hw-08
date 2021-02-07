@@ -1,23 +1,42 @@
 /* Постоянные клиенты */
 .clients {
   &-list {
-    // display: block
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+
+    // margin-top: -30px;
+    // margin-left: -30px;
+    // margin-right: 30px;
   }
 
   &-title {
     margin-bottom: 50px;
-    @include fonts(700, 36px, 1.16, 0.03em);
+    @include fonts(700, 28px, 1.18, 0.03em);
     color: $primary-text-color;
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      @include fonts(700, 36px, 1.16, 0.03em);
+    }
   }
+}
+
+.clients-item {
+  @media screen and (min-width: 768px) {
+    width: calc((100%-30px) / 3);
+    margin-bottom: 60px;
+  }
+
+  // margin-top: 30px;
+  // margin-left: 30px;
+  // width: calc(100% / 2 - 30px);
 }
 
 .clients-logo {
   // justify-content: center;
-  // display: inline-flex;
+  display: inline-block;
   // align-items: center;
-  width: 170px;
+  width: 100%;
   height: 90px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
@@ -37,6 +56,8 @@
 }
 
 .logo-icon {
+  width: 100%;
+  height: 90px;
   fill: #afb1b8;
 }
 

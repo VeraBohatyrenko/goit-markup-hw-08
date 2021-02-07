@@ -291,6 +291,7 @@ h5,
 h6,
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 body {
@@ -320,7 +321,7 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -341,6 +342,8 @@ img {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -362,7 +365,14 @@ img {
 }
 
 .section {
+  padding: 60px 0;
   outline: 2px solid red;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
 }
 
 /* header logo */
@@ -554,6 +564,9 @@ img {
 }
 
 .hero-title {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
   color: #ffffff;
   text-align: center;
@@ -562,6 +575,7 @@ img {
 
 @media screen and (min-width: 480px) {
   .hero-title {
+    width: 360px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.61;
@@ -580,6 +594,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .hero-title {
+    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -596,6 +611,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0;
   font-family: #212121;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -995,40 +1011,9 @@ img {
 
 /* Features (Особенности) */
 .section-features {
-  padding: 60px 0;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media screen and (min-width: 480px) {
-  .section-features {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .section-features {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section-features {
-    width: 1200px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .features-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features-item {
-    width: calc((100% - (90px)) / 4);
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1043,8 +1028,33 @@ img {
             justify-content: space-between;
     list-style: none;
   }
+}
+
+.features-item {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
   .features-item {
     width: calc((100% - (30px)) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-item {
+    width: calc((100% - (90px)) / 4);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .features-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .features-item:first-child {
+    margin-bottom: 30px;
   }
 }
 
@@ -1065,6 +1075,13 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .features-title-item {
+    text-align: left;
+  }
 }
 
 .features-text {
@@ -1167,11 +1184,38 @@ img {
 
 /* Team (Команда) */
 .section-team {
+  width: 100%;
+  padding-top: 60px;
   background-color: #f5f4fa;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-team {
+    padding: 94px 0;
+  }
 }
 
 .team-list {
   list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none;
+  }
+}
+
+.info-worker {
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .team-item {
@@ -1179,16 +1223,45 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .team-item {
+    width: calc((100% - (30px)) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-item {
+    width: calc((100% - (90px)) / 4);
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team .features-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .team-title {
-  margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   color: #212121;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .team-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
 }
 
 .photo-title {
@@ -1219,10 +1292,9 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.socials-item {
-  width: calc((100% - 30px) / 4);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .socials-item:not(:last-child) {
@@ -1320,23 +1392,42 @@ img {
 
 /* Постоянные клиенты */
 .clients-list {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .clients-title {
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   color: #212121;
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-item {
+    width: calc((100%-30px) / 3);
+    margin-bottom: 60px;
+  }
+}
+
 .clients-logo {
-  width: 170px;
+  display: inline-block;
+  width: 100%;
   height: 90px;
   border: 1px solid #afb1b8;
   -webkit-box-sizing: border-box;
@@ -1366,7 +1457,54 @@ img {
 }
 
 .logo-icon {
+  width: 100%;
+  height: 90px;
   fill: #afb1b8;
+}
+
+/* footer (Подвал) */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
+}
+
+.footer .address {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.footer .footer-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer .form-input-footer {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: #2f303a;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Карточки портфолио */
@@ -1445,48 +1583,4 @@ img {
 }
 
 /* Карточки портфолио */
-/* footer (Подвал) */
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #2f303a;
-}
-
-.footer .address {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-}
-
-.footer .footer-link {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer .footer-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.footer .form-input-footer {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background: #2f303a;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
 /*# sourceMappingURL=main.css.map */

@@ -15,55 +15,55 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/main.min.css" />
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="header">
+    <!-- <header class="header">
       <div class="container header-container">
         <div class="nav-container">
           <a class="header-logo" href="./index.html"
             ><span class="web">Web</span>Studio</a
           >
-          <nav class="nav">
-            <ul class="nav-list menu">
-              <li class="nav-item">
-                <a class="link" href="./index.html">Студия</a>
+          <div class="nav-header">
+            <nav class="nav">
+              <ul class="nav-list menu">
+                <li class="nav-item">
+                  <a class="link current line" href="./index.html">Студия</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="nav-item">
+                  <a class="link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="nav-list">
+              <li class="mail-phone">
+                <a class="link-mail" href="mailto:info@devstudio.com">
+                  <svg class="icon-mail" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
               </li>
               <li class="nav-item">
-                <a class="link current line" href="./portfolio.html"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="link" href="#">Контакты</a>
+                <a class="link-phone" href="tel:+380961111111">
+                  <svg class="icon-phone" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
               </li>
             </ul>
-          </nav>
-          <ul class="nav-list">
-            <li class="mail-phone">
-              <a class="link-mail" href="mailto:info@devstudio.com">
-                <svg class="icon-mail" width="16" height="12">
-                  <use href="./images/symbol-defs.svg#icon-mail"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="link-phone" href="tel:+380961111111">
-                <svg class="icon-phone" width="10" height="16">
-                  <use href="./images/symbol-defs.svg#icon-phone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
-    </header>
+    </header> -->
     <main>
       <!-- Коллекция -->
-      <section class="section">
+      <section class="section section-portfolio">
         <div class="container portfolio-container">
           <h1 class="visually-hidden">Коллекция</h1>
           <ul class="buttons-filter-list">
@@ -87,10 +87,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work1.jpg"
-                    alt="Технокряк"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo1-370.jpg    1x,
+                        ./images/web2/photo1-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo1-354.jpg    1x,
+                        ./images/web2/photo1-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo1-450.jpg    1x,
+                        ./images/web2/photo1-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work1.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -109,10 +134,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo2-370.jpg    1x,
+                        ./images/web2/photo2-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo2-354.jpg    1x,
+                        ./images/web2/photo2-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo2-450.jpg    1x,
+                        ./images/web2/photo2-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work2.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -133,10 +183,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work3.jpg"
-                    alt="Ресторан Seafood"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo3-370.jpg    1x,
+                        ./images/web2/photo3-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo3-354.jpg    1x,
+                        ./images/web2/photo3-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo3-450.jpg    1x,
+                        ./images/web2/photo3-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work3.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -157,10 +232,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work4.jpg"
-                    alt="Проект Prime"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo4-370.jpg    1x,
+                        ./images/web2/photo4-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo4-354.jpg    1x,
+                        ./images/web2/photo4-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo4-450.jpg    1x,
+                        ./images/web2/photo4-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work4.jpg"
+                      alt="Проект Prime"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -181,10 +281,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work5.jpg"
-                    alt="Проект Boxes"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo5-370.jpg    1x,
+                        ./images/web2/photo5-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo5-354.jpg    1x,
+                        ./images/web2/photo5-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo5-450.jpg    1x,
+                        ./images/web2/photo5-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work5.jpg"
+                      alt="Проект Boxes"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -205,10 +330,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work6.jpg"
-                    alt="Inspiration has no Borders"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo6-370.jpg    1x,
+                        ./images/web2/photo6-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo6-354.jpg    1x,
+                        ./images/web2/photo6-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo6-450.jpg    1x,
+                        ./images/web2/photo6-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work6.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -229,10 +379,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work7.jpg"
-                    alt="Издание Limited Edition"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo7-370.jpg    1x,
+                        ./images/web2/photo7-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo7-354.jpg    1x,
+                        ./images/web2/photo7-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo7-450.jpg    1x,
+                        ./images/web2/photo7-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work7.jpg"
+                      alt="Издание Limited Edition"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -253,10 +428,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work8.jpg"
-                    alt="Проект LAB"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo8-370.jpg    1x,
+                        ./images/web2/photo8-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo8-354.jpg    1x,
+                        ./images/web2/photo8-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo8-450.jpg    1x,
+                        ./images/web2/photo8-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work8.jpg"
+                      alt="Проект LAB"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -275,10 +475,35 @@
             <li class="portfolio-list-item">
               <a class="portfolio-link-item" href="">
                 <div class="portfolio-card">
-                  <img
-                    src="./images/portfolio/work/work9.jpg"
-                    alt="Growing Business"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/web2/photo9-370.jpg    1x,
+                        ./images/web2/photo9-370@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo9-354.jpg    1x,
+                        ./images/web2/photo9-354@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/web2/photo9-450.jpg    1x,
+                        ./images/web2/photo9-450@2x.jpg 2x
+                      "
+                      media="(max-width:480px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/work/work9.jpg"
+                      alt="Growing Business"
+                    />
+                  </picture>
+
                   <div class="portfolio-overlay">
                     <p class="text-overlay">
                       Технокряк это современная площадка распространения
@@ -304,64 +529,66 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="container footer-container">
-        <div class="footer-contacts">
-          <a class="footer-logo" href="./index.html">
-            <span class="web">Web</span><span class="logo-white">Studio</span>
-          </a>
-          <address class="address">
-            г. Киев, пр-т Леси Украинки, 26<br />
-            <a class="footer-link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            ><br />
-            <a class="footer-link" href="tel:+380961111111"
-              >+38 096 111 11 11</a
-            >
-          </address>
-        </div>
-        <div class="footer-socials">
-          <h2 class="footer-title">Присоединяйтесь</h2>
-          <ul class="socials-list-footer">
-            <li class="socials-item-footer">
-              <a class="socials-link-footer" href="www.instagram.com">
-                <svg class="socials-icon-footer" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item-footer">
-              <a class="socials-link-footer" href="https://twitter.com">
-                <svg class="socials-icon-footer" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item-footer">
-              <a class="socials-link-footer" href="https://facebook.com">
-                <svg class="socials-icon-footer" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials-item-footer">
-              <a class="socials-link-footer" href="https://linkedin.com">
-                <svg class="socials-icon-footer" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer-tablet">
+          <div class="footer-contacts">
+            <a class="footer-logo" href="./index.html">
+              <span class="web">Web</span><span class="logo-white">Studio</span>
+            </a>
+            <address class="address">
+              г. Киев, пр-т Леси Украинки, 26<br />
+              <a class="footer-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              ><br />
+              <a class="footer-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </address>
+          </div>
+          <div class="footer-socials">
+            <h2 class="footer-title">Присоединяйтесь</h2>
+            <ul class="socials-list-footer">
+              <li class="socials-item-footer">
+                <a class="socials-link-footer" href="www.instagram.com">
+                  <svg class="socials-icon-footer" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item-footer">
+                <a class="socials-link-footer" href="https://twitter.com">
+                  <svg class="socials-icon-footer" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item-footer">
+                <a class="socials-link-footer" href="https://facebook.com">
+                  <svg class="socials-icon-footer" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-item-footer">
+                <a class="socials-link-footer" href="https://linkedin.com">
+                  <svg class="socials-icon-footer" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="futter-sub">
           <h3 class="footer-title">Подпишитесь на рассылку</h3>
           <form class="form-sub">
-            <!-- <label class="form-label-sub"> -->
-            <input
-              type="e-mail"
-              class="form-input-footer"
-              name="e-mail"
-              placeholder="E-mail"
-            />
-            <!-- </label> -->
+            <label class="form-label-sub">
+              <input
+                type="e-mail"
+                class="form-input-footer"
+                name="e-mail"
+                placeholder="E-mail"
+              />
+            </label>
             <button type="submit" class="button-sub">
               Подписаться
               <svg class="buttons-sub" width="24" height="24">

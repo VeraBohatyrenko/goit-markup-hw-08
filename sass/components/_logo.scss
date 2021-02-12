@@ -1,19 +1,29 @@
 /* header logo */
 
 .header-logo {
-  margin-top: 26px;
-  margin-right: auto;
-  margin-bottom: 26px;
-  margin-left: 15px;
-  @include fonts(700, 26px, 1.19, 0.03em);
+  margin: 16px 0;
+  @include fonts(700, 24px, 1.17, 0.03em);
   color: $primary-text-color;
   font-family: "Raleway", sans-serif;
+  @media screen and (min-width: $tablet) {
+    @include fonts(700, 26px, 1.19, 0.03em);
+    margin: 26px 0;
+  }
 }
 
 .web {
   color: $accent-color;
 }
 
+.close-modal-menu {
+  padding: 0;
+}
+
+@media screen and (min-width: $tablet) {
+  .nav {
+    flex-grow: 1;
+  }
+}
 /* footer logo */
 
 .footer-logo {

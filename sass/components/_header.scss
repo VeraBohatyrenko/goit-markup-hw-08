@@ -1,14 +1,9 @@
 .header-container {
-  // display: flex;
-  // justify-content: space-between;
   border-bottom: 1px solid #ececec;
 }
 
 .container.header-container {
   @media screen and (min-width: $tablet) {
-    // justify-content: space-between;
-    // align-items: center;
-    // width: 100%;
   }
 }
 
@@ -70,7 +65,7 @@
 @media screen and (min-width: $tablet) {
   .link-mail,
   .link-phone {
-    display: block;
+    display: flex;
   }
 }
 
@@ -87,13 +82,6 @@
   }
 }
 
-// .link-phone {
-//   @media screen and (min-width: $tablet) {
-//     margin-top: 10;
-//     margin-bottom: 21px;
-//   }
-// }
-
 .menu {
   display: none;
 
@@ -101,7 +89,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // margin-right: 50px;
   }
 }
 
@@ -119,7 +106,6 @@
 
 .nav-list {
   height: 100%;
-  // display: flex;
   @include fonts(500, 14px, 1.14, 0.02em);
   list-style: none;
   text-decoration: none;
@@ -146,16 +132,6 @@
     color: $accent-color;
   }
 }
-
-// .link-mail,
-// .link-phone {
-//   display: inline-flex;
-//   align-items: center;
-// }
-
-// .mail-phone {
-//   margin-right: 30px;
-// }
 
 .icon-mail {
   margin-right: 10px;
@@ -216,28 +192,6 @@
 .header-modal-menu.is-open .icon-modal-close {
   display: none;
 }
-
-// .header-modal-menu {
-//   // display: none;
-//   width: 40px;
-//   height: 40px;
-//   background-color: $primary-white-color;
-//   @media screen and (min-width: $tablet) {
-//     display: none;
-//   }
-// }
-
-// .header-modal-menu {
-//   display: none;
-//   width: 40px;
-//   height: 40px;
-// }
-
-// // @media screen and (max-width: 767px) {
-// //   .header-modal-menu {
-// //     display: block;
-// //   }
-// }
 
 .mobile-menu {
   position: absolute;

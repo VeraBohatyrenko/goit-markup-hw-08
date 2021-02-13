@@ -280,7 +280,6 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  outline: 2px solid red;
 }
 
 h1,
@@ -366,7 +365,6 @@ img {
 
 .section {
   padding: 60px 0;
-  outline: 2px solid red;
 }
 
 @media screen and (min-width: 1200px) {

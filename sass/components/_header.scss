@@ -17,7 +17,6 @@
     width: 100%;
     display: flex;
     margin-top: 26px;
-    margin-bottom: 17px;
   }
   @media screen and (min-width: $desktop) {
     margin-top: 0;
@@ -203,6 +202,7 @@
   @media screen and (min-width: $tablet) {
     display: none;
   }
+  z-index: 3;
 }
 
 .header-modal-menu .icon-modal-menu {
@@ -247,8 +247,13 @@
   padding-left: 40px;
   left: 0;
   right: 0;
+  top: 0;
   height: auto;
   background-color: $primary-white-color;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  z-index: 2;
 
   &.is-open {
     opacity: 0;
@@ -267,15 +272,65 @@
   visibility: hidden;
 }
 
-// .mobile-menu-list {
-//   text-align: center;
-// }
+.header-modal-menu:hover .icon-modal-menu,
+.header-modal-menu:hover .icon-modal-close {
+  fill: $accent-color;
+  @include transition;
+}
+
+.mobile-menu-list {
+  margin-top: 27px;
+  margin-bottom: 302px;
+}
+
+.mobile-menu-contact {
+  margin-bottom: 64px;
+}
+
+.mobile-phone {
+  margin-bottom: 32px;
+}
+
+.mobile-link-phone {
+  @include fonts(500, 34px, 1.17, 0.02em);
+  color: $accent-color;
+}
+
+.mobile-link-phone {
+  @include fonts(500, 24px, 1.16, 0.02em);
+  color: $accent-color;
+}
 
 .mobile.menu-item:not(:last-child) {
   margin-bottom: 32px;
 }
 
 .mobile-menu-link {
-  @include fonts(500, 14px, 1.14, 0.02em);
+  @include fonts(500, 40px, 1.17, 0.02em);
+  color: $primary-text-color;
   list-style: none;
+}
+
+.mobile .link.current {
+  color: $accent-color;
+}
+
+.mobile-social-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-social-item {
+  @media screen and (max-width: 479px) {
+    margin-bottom: 10px;
+  }
+}
+
+.mobile-socials-link {
+  @include fonts(500, 18px, 1.22, 0.02em);
+  color: $accent-color;
+}
+
+.mobile-separator {
+  margin: 0 10px;
 }
